@@ -26,6 +26,7 @@ Formulario de Login y Pass
             alert("Ocultaste el formulario ;-)" + $("#nomusuario").val());
             */
            
+           
            if($("#nomusuario").val()!="" && $("#clave").val()!=""){
                //$("#frmusuario").submit();
                $.ajax({url:"controlador/ValidaUsuario.php"
@@ -35,6 +36,7 @@ Formulario de Login y Pass
                    ,success:function(resultado){
                        $("#mensaje").html(resultado);
                }
+               
            });
            }
            else
