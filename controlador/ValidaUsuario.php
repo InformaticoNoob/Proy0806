@@ -5,9 +5,9 @@ include '../librerias.php';
 $oUsu=new Usuario($_REQUEST["nomusuario"], $_REQUEST["clave"]);
 
 if ($oUsu->VerificaLocal()){
-    echo "Todo bien";
+    echo "<b>Todo bien</b>";
 }
 else
 {
-    echo "Todo mal";
+    echo "<b>Todo mal</b>";
 }

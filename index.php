@@ -9,10 +9,11 @@ Formulario de Login y Pass
         <title></title>
     </head>
     <body>
-        <form id="frmusuario">
+        <form id="frmusuario" action="controlador/ValidaUsuario.php" method="post">
             <div><label>Usuario</label><input id="nomusuario" type="text" name="nomusuario"></div>
             <div><label>Clave</label><input id="clave" type="password" name="clave"></div>
             <input id="enviar" type="button" onclick="" value="Enviar">
+            <div id="mensaje"></div>
         </form>
     </body>
     
@@ -26,7 +27,15 @@ Formulario de Login y Pass
             */
            
            if($("#nomusuario").val()!="" && $("#clave").val()!=""){
-               $("#frmusuario").submit();
+               //$("#frmusuario").submit();
+               $.ajax({url:"controlador/ValidaUsuario.php"
+                   ,type:'post'
+                   ,data:{'nomusuario':$("#nomusuario").val(),
+                         'clave':$("#clave").val()}
+                   ,success:function(resultado){
+                       $("#mensaje").html(resultado);
+               }
+           });
            }
            else
            {

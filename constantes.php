@@ -1,3 +1,3 @@
 <?php
 
-define("PATH",$_SERVER["DOCUMENT_ROOT"]."/Proy0806");
+define("PATH",$_SERVER["DOCUMENT_ROOT"]."/Proy08-06");
