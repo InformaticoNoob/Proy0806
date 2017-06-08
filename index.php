@@ -10,8 +10,8 @@ Formulario de Login y Pass
     </head>
     <body>
         <form id="frmusuario">
-            <input id="nomusuario" type="text" name="nomusuario">
-            <input id="clave" type="password" name="clave">
+            <div><label>Usuario</label><input id="nomusuario" type="text" name="nomusuario"></div>
+            <div><label>Clave</label><input id="clave" type="password" name="clave"></div>
             <input id="enviar" type="button" onclick="" value="Enviar">
         </form>
     </body>
