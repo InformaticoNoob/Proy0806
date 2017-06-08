@@ -9,7 +9,7 @@ Formulario de Login y Pass
         <title></title>
     </head>
     <body>
-        <form>
+        <form id="frmusuario">
             <input id="nomusuario" type="text" name="nomusuario">
             <input id="clave" type="password" name="clave">
             <input id="enviar" type="button" onclick="" value="Enviar">
@@ -20,8 +20,18 @@ Formulario de Login y Pass
         
     $(document).ready(function(){
         $("#enviar").click(function(){
+            /*
             $("form").hide();
-            alert("Ocultaste el formulario ;-)");
+            alert("Ocultaste el formulario ;-)" + $("#nomusuario").val());
+            */
+           
+           if($("#nomusuario").val()!="" && $("#clave").val()!=""){
+               $("#frmusuario").submit();
+           }
+           else
+           {
+               alert("Debe agregar el usuario y clave");
+           }
         });
     });
     
